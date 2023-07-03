@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function Index() {
+export default function Tentang() {
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -26,20 +26,21 @@ export default function Index() {
         <div className="w-1/2 flex justify-center items-center">
           <div className="mx-20">
             <div className="font-semibold text-5xl text-sky-500 mb-4">
-              Kami Hadir
+              Kenali Kami
               <br />
-              Untuk Anda.
+              Lebih Dalam.
             </div>
             <div className="text-justify text-gray-500 font-normal">
-              Graha Harmas Brataseni menjawab semua keinginan anda yang akan
-              melaksanakan resepsi, seminar/meeting, khitanan, pesta ulang tahun
-              dan lain sebagainya. Dengan fasilitas yang lengkap, lokasi
-              strategis dan harga terjangkau (dimulai dari Rp 2.500.000).
+              Kami adalah perusahaan yang bergerak dalam bidang persewaan
+              gedung, kami menawarkan berbagai pilihan yang menyesuaikan dengan
+              budget masyarakat. Letak kami yang strategis, fasilitas yang
+              lengkap, parkir luas, harga terjangkau. Tentunynya siap mendukung
+              dan mensukseskan acara para pelanggan.
             </div>
             <div className="mt-4 flex gap-4">
-              <Link href={`/tentang`}>
+              <Link href={`/`}>
                 <button className="flex gap-1 btn bg-emerald-500 hover:bg-emerald-600 border-emerald-600">
-                  Kenal kami lebih dalam
+                  Kembali ke beranda
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
