@@ -1,10 +1,12 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { formatTanggal } from "@/pages/helper"
+import { handleConvertToPdf } from "@/pages/admin/laporan";
 
 export default function Pesanan() {
   const [dataPesanan, setDataPesanan] = useState([]);
   const [data, setData] = useState();
+  
   const fetchPesanan = async () => {
     try {
       const resPesanan = await fetch("http://localhost:1323/pesanan");
@@ -55,6 +57,12 @@ export default function Pesanan() {
       <div className="border border-white bg-white p-3 col-span-2 h-fit shadow-lg shadow-gray-400">
         <div className="flex justify-between mb-1 pb-1 border-b border-sky-300">
           <div className="text-sky-400 font-medium">MANAJEMEN PESANAN</div>
+          <button
+            onClick={(e) => handleConvertToPdf(dataPesanan)}
+            className="btn bg-sky-500 border-sky-600 hover:bg-sky-600 px-2"
+          >
+            Cetak Laporan
+          </button>
         </div>
         <table className="table-fixed w-full">
           <tbody>
