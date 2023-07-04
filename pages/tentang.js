@@ -1,24 +1,9 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+
 
 export default function Tentang() {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:1323/gedung");
-        const jsonData = await response.json();
-        setData(jsonData.data);
-      } catch (error) {
-        console.error("Error:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
       <Header />
