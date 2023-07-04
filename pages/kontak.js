@@ -15,9 +15,9 @@ export default function Tentang() {
               Untuk Pemesanan.
             </div>
             <div className="text-justify text-gray-500 font-normal">
-              Pembayaran bisa dikirimkan melalui transfer ke rekening berikut :{" "}
+              Pembayaran bisa melalui transfer ke rekening berikut :<br />
               <span className="font-semibold text-sky-400">Bank BCA</span>, No.
-              Rek <span className="font-semibold text-sky-400">8692456652</span>{" "}
+              Rek <span className="font-semibold text-sky-400">8692456652</span>,{" "}
               a.n{" "}
               <span className="font-semibold text-sky-400">
                 Luri Agung Satya Budi
