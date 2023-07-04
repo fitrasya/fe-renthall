@@ -5,9 +5,26 @@ import Gedung from './gedung';
 import Pemesan from "./pemesan";
 import Pesanan from "./pesanan";
 import React from 'react'
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getCookie } from "@/pages/helper";
+import { useRouter } from "next/router";
 
 export default function AdminHome() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const loginCookie = getCookie("login");
+    if (loginCookie === "admin") {
+      if (!loginCookie || loginCookie !== "admin") {
+        router.push("/login");
+      }
+    } else {
+      if (!loginCookie || loginCookie !== "user") {
+        router.push("/");
+      }
+    }
+  }, []);
+  
   const [halaman, setHalaman] = useState("dashboard");
   return (
     <main className="flex min-h-screen flex-col bg-gray-200 gap-8">
