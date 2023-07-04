@@ -14,14 +14,8 @@ export default function AdminHome() {
 
   useEffect(() => {
     const loginCookie = getCookie("login");
-    if (loginCookie === "admin") {
-      if (!loginCookie || loginCookie !== "admin") {
-        router.push("/login");
-      }
-    } else {
-      if (!loginCookie || loginCookie !== "user") {
-        router.push("/");
-      }
+    if (!loginCookie || loginCookie !== "admin") {
+      router.push("/login");
     }
   }, []);
   

@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { formatTanggal } from "@/pages/helper"
 
 export default function Pesanan() {
   const [dataPesanan, setDataPesanan] = useState([]);
@@ -13,6 +14,7 @@ export default function Pesanan() {
       console.error("Error:", error);
     }
   };
+  
   useEffect(() => {
     fetchPesanan();
   }, []);
@@ -47,18 +49,6 @@ export default function Pesanan() {
       console.error("Error:", error);
     }
   };
-
-  function formatTanggal(timestamp) {
-    const monthNames = [
-      "Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agst", "Sep", "Okt", "Nov", "Des",
-    ];
-    const dateObj = new Date(timestamp);
-    const monthIndex = dateObj.getMonth();
-    const formattedDate = `${dateObj.getDate()} ${
-      monthIndex === 0 ? monthNames[11] : monthNames[monthIndex - 1]
-    } ${dateObj.getFullYear()} ${dateObj.getHours()}:${dateObj.getMinutes()}`;
-    return formattedDate;
-  }
 
   return (
     <div className="grid grid-cols-3 gap-4">
