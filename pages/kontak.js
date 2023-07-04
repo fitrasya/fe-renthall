@@ -16,12 +16,14 @@ export default function Tentang() {
             </div>
             <div className="text-justify text-gray-500 font-normal">
               Pembayaran bisa melalui transfer ke rekening berikut :<br />
-              <span className="font-semibold text-sky-400">Bank BCA</span>, No.
-              Rek <span className="font-semibold text-sky-400">8692456652</span>,{" "}
-              a.n{" "}
+              <span className="font-semibold text-sky-400">
+                Bank BCA
+              </span> a.n{" "}
               <span className="font-semibold text-sky-400">
                 Luri Agung Satya Budi
-              </span>
+              </span>{" "}
+              No. Rek{" "}
+              <span className="font-semibold text-sky-400">8692456652</span>,{" "}
             </div>
             <div className="mt-4 flex gap-4">
               <a
