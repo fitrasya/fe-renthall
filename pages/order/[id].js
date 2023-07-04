@@ -69,7 +69,7 @@ export default function Order() {
         const jsonData = await response.json();
         if (jsonData.status == 200) {
           alert(
-            "Pesanan berhasil dikirim, silakan tunggu konfirmasi oleh admin melalui pesan whatsapp"
+            "Pesanan berhasil dikirim, silakan tunggu konfirmasi oleh admin melalui pesan whatsapp atau login menggunakan nomor hp yang dimasukkan untuk melihat status pemesanan"
           );
           router.push(`/`);
         } else {
